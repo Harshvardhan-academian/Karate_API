@@ -1,43 +1,59 @@
 name: Create cart
- 
+
 on:
-  - push
-  - pull_request
- 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2.0.0
- 
-    - name: API tests
-      uses: erikbos/karate-action@main
-      with:
-        url: http://simple-grocery-store-api.online/
-        tests: |
-         Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature 
-            
-    - name: Extract cartId from logs
-      id: extract-cartId
-      run: |
-          # Replace with the actual command to extract cartId from logs
-          cartId=$(grep -oP 'Generated cartId: \K[0-9a-f]{8}' target/cartId.txt | tail -n 1)
-          echo "::set-output name=cartId::$cartId"
-          
-    - name: Write cartId to file
-      run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
 
-    - name: Commit and push updated cartId.txt
-      run: |
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+
+      - name: API tests
+        uses: erikbos/karate-action@main
+        with:
+          url: http://simple-grocery-store-api.online/
+          tests: |
+            Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature
+
+      - name: Extract cartId from logs
+        id: extract-cartId
+        run: |
+          # Replace with the actual command to extract cartId from logs
+          cartId=$(grep -oP 'Generated cartId: \K[0-9a-f]{8}' target/karate-reports/*.log | tail -n 1)
+          echo "::set-output name=cartId::$cartId"
+
+      - name: Write cartId to file
+        run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
+
+      - name: Commit and push updated cartId.txt
+        run: |
           git config --global user.email "hnigavekar@academian.com"
           git config --global user.name "Harsh"
           git add cartId.txt
           git commit -m "Update cartId in cartId.txt [skip ci]"
           git push
-    # Upload the contents of Test Results directory to workspace
-    - name: Output the run Details
-      uses: actions/upload-artifact@v4
-      with:
+
+      - name: Overwrite cartId in target folder
+        run: |
+          echo "Updating cartId in target folder..."
+          echo "${{ steps.extract-cartId.outputs.cartId }}" > target/cartId.txt
+
+      - name: Commit and push updated cartId in target folder
+        run: |
+          git add target/cartId.txt
+          git commit -m "Update cartId in target folder [skip ci]"
+          git push
+
+      - name: Upload the contents of Test Results directory to workspace
+        uses: actions/upload-artifact@v4
+        with:
           name: Reports
           path: target/karate-reports
