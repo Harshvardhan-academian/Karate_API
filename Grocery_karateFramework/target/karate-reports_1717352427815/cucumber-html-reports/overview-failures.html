@@ -1,0 +1,5972 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Karate Run</td>
+      <td>02 Jun 2024, 23:49</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+      <p>The following summary displays scenarios that failed.</p>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="elements">
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4138339230.html">com/api/automation/master.feature</a>
+    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">23.002</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">To automate</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+          <div class="comment indention">#	STATUS</div>
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/GetStatus/GetStatus.feature&quot;)</span>
+
+  <span class="lead-duration duration">3.070</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/api/automation/GetStatus/GetStatus.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/status'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">2.960</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>23:48:58.698 request:
+1 &gt; GET http://simple-grocery-store-api.online/status
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:00.826 response time in milliseconds: 2125
+1 &lt; 200
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T5W02CTNMF4N6RJ31RBC-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:00 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;f-RQ8OySFd+KR+AvtJ7qImjtT0D/0&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;status&quot;:&quot;UP&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response.status == 'UP'</span>
+
+  <span class="lead-duration duration">0.069</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print &quot;API is working!&quot;</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>23:49:00.942 [print] API is working! 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+          <div class="comment indention"># PRODUCTS</div>
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Product/getAllProducts.feature&quot;)</span>
+
+  <span class="lead-duration duration">1.304</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/api/automation/Product/getAllProducts.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.528</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>23:49:00.973 request:
+1 &gt; GET http://simple-grocery-store-api.online/products
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:01.494 response time in milliseconds: 520
+1 &lt; 200
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T7HR90TP49JJSMYBQPXA-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:01 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;6b4-RVZTrjCoC03tQFslV/oF2zXZ8Wo&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+[{&quot;id&quot;:4643,&quot;category&quot;:&quot;coffee&quot;,&quot;name&quot;:&quot;Starbucks Coffee Variety Pack, 100% Arabica&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:4646,&quot;category&quot;:&quot;coffee&quot;,&quot;name&quot;:&quot;Ethical Bean Medium Dark Roast, Espresso&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:4641,&quot;category&quot;:&quot;coffee&quot;,&quot;name&quot;:&quot;Don Francisco Colombia Supremo Medium Roast&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:1225,&quot;category&quot;:&quot;fresh-produce&quot;,&quot;name&quot;:&quot;1/2 in. Brushless Hammer Drill&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:3674,&quot;category&quot;:&quot;fresh-produce&quot;,&quot;name&quot;:&quot;20V Max Cordless Drill Combo Kit&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:2585,&quot;category&quot;:&quot;fresh-produce&quot;,&quot;name&quot;:&quot;Green Cabbage Organic&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:5851,&quot;category&quot;:&quot;fresh-produce&quot;,&quot;name&quot;:&quot;Cucumber Organic&quot;,&quot;inStock&quot;:false},{&quot;id&quot;:8739,&quot;category&quot;:&quot;fresh-produce&quot;,&quot;name&quot;:&quot;Fresh Spinach Organic&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:2177,&quot;category&quot;:&quot;meat-seafood&quot;,&quot;name&quot;:&quot;Cosco Three Step Steel Platform&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:1709,&quot;category&quot;:&quot;meat-seafood&quot;,&quot;name&quot;:&quot;Beef Choice Angus Ribeye Steak&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:1709,&quot;category&quot;:&quot;meat-seafood&quot;,&quot;name&quot;:&quot;Angus Steak Burgers&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:7395,&quot;category&quot;:&quot;meat-seafood&quot;,&quot;name&quot;:&quot;Boneless Skinless Chicken Breasts&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:8554,&quot;category&quot;:&quot;candy&quot;,&quot;name&quot;:&quot;Kinder Joy Eggs&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:6483,&quot;category&quot;:&quot;candy&quot;,&quot;name&quot;:&quot;Cadbury Milk Chocolate&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:5774,&quot;category&quot;:&quot;candy&quot;,&quot;name&quot;:&quot;HERSHEY'S, Milk Chocolate Almond&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:8753,&quot;category&quot;:&quot;dairy&quot;,&quot;name&quot;:&quot;Reduced Fat Milk&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:9482,&quot;category&quot;:&quot;dairy&quot;,&quot;name&quot;:&quot;Whole Milk&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:5477,&quot;category&quot;:&quot;dairy&quot;,&quot;name&quot;:&quot;Cream Cheese&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:5478,&quot;category&quot;:&quot;dairy&quot;,&quot;name&quot;:&quot;Low Fat Vanilla Yogurt&quot;,&quot;inStock&quot;:true},{&quot;id&quot;:4875,&quot;category&quot;:&quot;bread-bakery&quot;,&quot;name&quot;:&quot;2800 Watt Inverter Generator&quot;,&quot;inStock&quot;:true}]
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>23:49:01.503 [print] [
+  {
+    &quot;id&quot;: 4643,
+    &quot;category&quot;: &quot;coffee&quot;,
+    &quot;name&quot;: &quot;Starbucks Coffee Variety Pack, 100% Arabica&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 4646,
+    &quot;category&quot;: &quot;coffee&quot;,
+    &quot;name&quot;: &quot;Ethical Bean Medium Dark Roast, Espresso&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 4641,
+    &quot;category&quot;: &quot;coffee&quot;,
+    &quot;name&quot;: &quot;Don Francisco Colombia Supremo Medium Roast&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 1225,
+    &quot;category&quot;: &quot;fresh-produce&quot;,
+    &quot;name&quot;: &quot;1/2 in. Brushless Hammer Drill&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 3674,
+    &quot;category&quot;: &quot;fresh-produce&quot;,
+    &quot;name&quot;: &quot;20V Max Cordless Drill Combo Kit&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 2585,
+    &quot;category&quot;: &quot;fresh-produce&quot;,
+    &quot;name&quot;: &quot;Green Cabbage Organic&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 5851,
+    &quot;category&quot;: &quot;fresh-produce&quot;,
+    &quot;name&quot;: &quot;Cucumber Organic&quot;,
+    &quot;inStock&quot;: false
+  },
+  {
+    &quot;id&quot;: 8739,
+    &quot;category&quot;: &quot;fresh-produce&quot;,
+    &quot;name&quot;: &quot;Fresh Spinach Organic&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 2177,
+    &quot;category&quot;: &quot;meat-seafood&quot;,
+    &quot;name&quot;: &quot;Cosco Three Step Steel Platform&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 1709,
+    &quot;category&quot;: &quot;meat-seafood&quot;,
+    &quot;name&quot;: &quot;Beef Choice Angus Ribeye Steak&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 1709,
+    &quot;category&quot;: &quot;meat-seafood&quot;,
+    &quot;name&quot;: &quot;Angus Steak Burgers&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 7395,
+    &quot;category&quot;: &quot;meat-seafood&quot;,
+    &quot;name&quot;: &quot;Boneless Skinless Chicken Breasts&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 8554,
+    &quot;category&quot;: &quot;candy&quot;,
+    &quot;name&quot;: &quot;Kinder Joy Eggs&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 6483,
+    &quot;category&quot;: &quot;candy&quot;,
+    &quot;name&quot;: &quot;Cadbury Milk Chocolate&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 5774,
+    &quot;category&quot;: &quot;candy&quot;,
+    &quot;name&quot;: &quot;HERSHEY'S, Milk Chocolate Almond&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 8753,
+    &quot;category&quot;: &quot;dairy&quot;,
+    &quot;name&quot;: &quot;Reduced Fat Milk&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 9482,
+    &quot;category&quot;: &quot;dairy&quot;,
+    &quot;name&quot;: &quot;Whole Milk&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 5477,
+    &quot;category&quot;: &quot;dairy&quot;,
+    &quot;name&quot;: &quot;Cream Cheese&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 5478,
+    &quot;category&quot;: &quot;dairy&quot;,
+    &quot;name&quot;: &quot;Low Fat Vanilla Yogurt&quot;,
+    &quot;inStock&quot;: true
+  },
+  {
+    &quot;id&quot;: 4875,
+    &quot;category&quot;: &quot;bread-bakery&quot;,
+    &quot;name&quot;: &quot;2800 Watt Inverter Generator&quot;,
+    &quot;inStock&quot;: true
+  }
+]
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match each $ contains { 'id': '#number', 'category': '#string', 'name': '#string', 'inStock': '#boolean' }</span>
+
+  <span class="lead-duration duration">0.026</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products'+ '124'</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.368</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>23:49:01.549 request:
+1 &gt; GET http://simple-grocery-store-api.online/products124
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:01.914 response time in milliseconds: 355
+1 &lt; 404
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T82T9AY2PV6PCR3KZ5BF-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:01 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;54-0M1W4PX+XMa0VrPIhDCvHEdTW2w&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;The resource could not be found. Check your endpoint and request method.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 404</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>23:49:01.917 [print] {
+  &quot;error&quot;: &quot;The resource could not be found. Check your endpoint and request method.&quot;
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">param available = &quot;abc&quot;</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.319</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>23:49:01.934 request:
+1 &gt; GET http://simple-grocery-store-api.online/products?available=abc
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:02.250 response time in milliseconds: 315
+1 &lt; 400
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T8EWEG0S7VGMMBXPYJF0-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:02 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;56-yUGE/+sUTnLA3nw63CqhwvNiFf0&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;Invalid value for query parameter 'available'. Must be one of: true, false&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>23:49:02.252 [print] {
+  &quot;error&quot;: &quot;Invalid value for query parameter 'available'. Must be one of: true, false&quot;
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Product/getSingleProduct.feature&quot;)</span>
+
+  <span class="lead-duration duration">1.525</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/api/automation/Product/getSingleProduct.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products/4643'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.380</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>23:49:02.282 request:
+1 &gt; GET http://simple-grocery-store-api.online/products/4643
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:02.659 response time in milliseconds: 375
+1 &lt; 200
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T8SN98TCPVRC1SD15CXM-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:02 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;9f-HOV8MpLmQj4WLcZExQr2z/Z8zWc&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;id&quot;:4643,&quot;category&quot;:&quot;coffee&quot;,&quot;name&quot;:&quot;Starbucks Coffee Variety Pack, 100% Arabica&quot;,&quot;manufacturer&quot;:&quot;Starbucks&quot;,&quot;price&quot;:40.91,&quot;current-stock&quot;:14,&quot;inStock&quot;:true}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response == { id: '#number',category : '#string', name: '#string',manufacturer:'#string', price: '#number',current-stock:'#number',inStock:'#boolean'}</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products/2585'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.415</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>23:49:02.673 request:
+1 &gt; GET http://simple-grocery-store-api.online/products/2585
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:03.085 response time in milliseconds: 411
+1 &lt; 200
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T95WGJDDW4KCBJJD6DTE-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:02 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;9d-8LLankJoMT59pax+F+OJXdFG/Xg&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;id&quot;:2585,&quot;category&quot;:&quot;fresh-produce&quot;,&quot;name&quot;:&quot;Green Cabbage Organic&quot;,&quot;manufacturer&quot;:&quot;Jack&amp;Mary Organic Farms&quot;,&quot;price&quot;:3.02,&quot;current-stock&quot;:30,&quot;inStock&quot;:true}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response == { id: '#number',category : '#string', name: '#string',manufacturer:'#string', price: '#number',current-stock:'#number',inStock:'#boolean'}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products/4641'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.379</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>23:49:03.102 request:
+1 &gt; GET http://simple-grocery-store-api.online/products/4641
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:03.478 response time in milliseconds: 376
+1 &lt; 200
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T9KWK3WR8AES0MDDZKWS-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:03 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;a2-hfgHV3lf1DHKv77B2hBDPeUZ7dg&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;id&quot;:4641,&quot;category&quot;:&quot;coffee&quot;,&quot;name&quot;:&quot;Don Francisco Colombia Supremo Medium Roast&quot;,&quot;manufacturer&quot;:&quot;Don Francisco&quot;,&quot;price&quot;:9.76,&quot;current-stock&quot;:15,&quot;inStock&quot;:true}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response == { id: '#number',category : '#string', name: '#string',manufacturer:'#string', price: '#number',current-stock:'#number',inStock:'#boolean'}</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/products/4644'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.276</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details">
+        <pre>23:49:03.499 request:
+1 &gt; GET http://simple-grocery-store-api.online/products/4644
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:03.773 response time in milliseconds: 273
+1 &lt; 404
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2T9ZR93YVR6E8XJF000TZ-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:03 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;24-QY068Q1Z+XooXOFR9iejwmQGZ4A&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;No product with id 4644.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 404</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print 'Product not found !'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>23:49:03.776 [print] Product not found ! 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>23:49:03.777 [print] {
+  &quot;error&quot;: &quot;No product with id 4644.&quot;
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+          <div class="comment indention"># CART</div>
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/createNewCart.feature&quot;)</span>
+
+  <span class="lead-duration duration">1.150</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/api/automation/Cart/createNewCart.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">1.124</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details">
+        <pre>23:49:03.791 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:04.913 response time in milliseconds: 1120
+1 &lt; 201
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TA9C9T1GWPJKTGP73XDF-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:04 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;31-hA0vnf848YwskgLP2iYIuAdMGZ8&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;created&quot;:true,&quot;cartId&quot;:&quot;d2HcOmzJGApADHbafbIMi&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 201</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match response.created == true</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">def cartId = response.cartId</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">karate.write(cartId, 'cartId.txt')</span>
+
+  <span class="lead-duration duration">0.011</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>23:49:04.928 write to file: target\cartId.txt
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/getCart.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.808</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/api/automation/Cart/getCart.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print 'Cart ID in get cart:', cartId</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-19">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details">
+        <pre>23:49:05.001 [print] Cart ID in get cart: d2HcOmzJGApADHbafbIMi 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId</span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def urls = '/carts/' + cartId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print urls</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>23:49:05.017 [print] /carts/d2HcOmzJGApADHbafbIMi 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.380</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>23:49:05.020 request:
+1 &gt; GET http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:05.397 response time in milliseconds: 375
+1 &lt; 200
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TBFNVS665K83QDHP6MPJ-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:05 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;31-L78iCzSY/5De6mHVb3Kwl39AbWc&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;items&quot;:[],&quot;created&quot;:&quot;2024-06-02T18:19:04.255Z&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>23:49:05.400 [print] {
+  &quot;items&quot;: [
+  ],
+  &quot;created&quot;: &quot;2024-06-02T18:19:04.255Z&quot;
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">print 'Cart ID in get cart:', cartId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-23">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details">
+        <pre>23:49:05.426 [print] Cart ID in get cart: d2HcOmzJGApADHbafbIMi 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId+&quot;123&quot;</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def urls = '/carts/' + cartId+&quot;123&quot;</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print urls</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>23:49:05.433 [print] /carts/d2HcOmzJGApADHbafbIMi123 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.300</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-25">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-25" class="collapse collapsable-details">
+        <pre>23:49:05.436 request:
+1 &gt; GET http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi123
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:49:05.732 response time in milliseconds: 295
+1 &lt; 404
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TBV9G14RX884VMYSTJ8G-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:05 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;35-xCG50YcY/JJ3JiYsVXD5WDR2v6c&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;No cart with id d2HcOmzJGApADHbafbIMi123.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 404</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-26">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-26" class="collapse collapsable-details">
+        <pre>23:49:05.736 [print] {
+  &quot;error&quot;: &quot;No cart with id d2HcOmzJGApADHbafbIMi123.&quot;
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/addItemsToCart.feature&quot;)</span>
+
+  <span class="lead-duration duration">3.783</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-27">
+          <a>status</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details  in ">
+        <pre>status code was: 400, expected: 201, response time in milliseconds: 614, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18
+status code was: 400, expected: 201, response time in milliseconds: 677, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18
+classpath:com/api/automation/master.feature:15</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>23:49:09.521 classpath:com/api/automation/master.feature:15
+And call read(&quot;classpath:com/api/automation/Cart/addItemsToCart.feature&quot;)
+status code was: 400, expected: 201, response time in milliseconds: 614, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18
+status code was: 400, expected: 201, response time in milliseconds: 677, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18
+classpath:com/api/automation/master.feature:15
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">com/api/automation/Cart/addItemsToCart.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId + '/items'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request { &quot;productId&quot;: 4641, &quot;quantity&quot;: 1 }</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept :&quot;application/json&quot;,Content-type : &quot;application/json&quot;}</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.675</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-29">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-29" class="collapse collapsable-details">
+        <pre>23:49:05.833 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items
+1 &gt; Accept: application/json
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 31
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;productId&quot;:4641,&quot;quantity&quot;:1}
+
+23:49:06.447 response time in milliseconds: 614
+1 &lt; 400
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TC7QG4F7241FRQ2SSAH8-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:06 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;38-doJkVicOSjcQ/BgI6ZqGcJtsAl4&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then failed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 201</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-30">
+          <a>status</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details  in ">
+        <pre>status code was: 400, expected: 201, response time in milliseconds: 614, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-31">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-31" class="collapse collapsable-details">
+        <pre>23:49:06.466 classpath:com/api/automation/Cart/addItemsToCart.feature:18
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 614, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId + '/items'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request { &quot;productId&quot;: 2585, &quot;quantity&quot;: 2 }</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept :&quot;application/json&quot;,Content-type : &quot;application/json&quot;}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.680</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-32">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-32" class="collapse collapsable-details">
+        <pre>23:49:06.488 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items
+1 &gt; Accept: application/json
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 31
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;productId&quot;:2585,&quot;quantity&quot;:2}
+
+23:49:07.166 response time in milliseconds: 677
+1 &lt; 400
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TCXB7ET32YZ8GE0MA7KJ-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:06 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;38-doJkVicOSjcQ/BgI6ZqGcJtsAl4&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then failed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 201</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-33">
+          <a>status</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details  in ">
+        <pre>status code was: 400, expected: 201, response time in milliseconds: 677, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-34">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details">
+        <pre>23:49:07.168 classpath:com/api/automation/Cart/addItemsToCart.feature:18
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 677, url: http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items, response: 
+{&quot;error&quot;:&quot;This product has already been added to cart.&quot;}
+classpath:com/api/automation/Cart/addItemsToCart.feature:18
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId + '/items'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request { &quot;productId&quot;: 8739, &quot;quantity&quot;: 2 }</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept :&quot;application/json&quot;,Content-type : &quot;application/json&quot;}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.899</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-35">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details">
+        <pre>23:49:07.193 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items
+1 &gt; Accept: application/json
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 31
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;productId&quot;:8739,&quot;quantity&quot;:2}
+
+23:49:08.088 response time in milliseconds: 894
+1 &lt; 201
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TDJEHW0M0HXMCMGK9CEV-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:07 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;23-sKTOXuzsVslaSzv3PrFPXKQEcQ4&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;created&quot;:true,&quot;itemId&quot;:231526721}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 201</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId +'/items'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request { &quot;productId&quot;: &lt;invalid_productId&gt;, &quot;quantity&quot;: 1 }</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept :&quot;application/json&quot;,Content-type : &quot;application/json&quot;}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.480</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>23:49:08.125 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items
+1 &gt; Accept: application/json
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 48
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;productId&quot;:&quot;&lt;invalid_productId&gt;&quot;,&quot;quantity&quot;:1}
+
+23:49:08.598 response time in milliseconds: 473
+1 &lt; 400
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TEGEY5HQTZZTHCHC962M-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:08 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;29-oQj3XplkY+x83s6gzA5XvjIR5gM&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;Invalid or missing productId.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId +'/items'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request { &quot;productId&quot;: &lt;invalid_productId&gt;, &quot;quantity&quot;: 2 }</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept :&quot;application/json&quot;,Content-type : &quot;application/json&quot;}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.495</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-37">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-37" class="collapse collapsable-details">
+        <pre>23:49:08.620 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items
+1 &gt; Accept: application/json
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 48
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;productId&quot;:&quot;&lt;invalid_productId&gt;&quot;,&quot;quantity&quot;:2}
+
+23:49:09.112 response time in milliseconds: 491
+1 &lt; 400
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TEZRAZ6Q61F00JP23DMS-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:08 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;29-oQj3XplkY+x83s6gzA5XvjIR5gM&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;Invalid or missing productId.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url 'http://simple-grocery-store-api.online'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def File = Java.type('java.io.File')</span>
+
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def Scanner = Java.type('java.util.Scanner')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def path = 'C:/Users/HarshvardhanNigaveka/eclipse-workspace/Grocery_karateFramework/target/CartId.txt'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def file = new File(path)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def scanner = new Scanner(file)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def cartId = scanner.useDelimiter('\\Z').next()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">scanner.close()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '/carts/' + cartId +'/items'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request { &quot;productId&quot;: &lt;invalid_productId&gt;, &quot;quantity&quot;: 2 }</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept :&quot;application/json&quot;,Content-type : &quot;application/json&quot;}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.380</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-38">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-38" class="collapse collapsable-details">
+        <pre>23:49:09.143 request:
+1 &gt; POST http://simple-grocery-store-api.online/carts/d2HcOmzJGApADHbafbIMi/items
+1 &gt; Accept: application/json
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 48
+1 &gt; Host: simple-grocery-store-api.online
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.22)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;productId&quot;:&quot;&lt;invalid_productId&gt;&quot;,&quot;quantity&quot;:2}
+
+23:49:09.520 response time in milliseconds: 376
+1 &lt; 400
+1 &lt; server: Fly/f08fbe14 (2024-05-29)
+1 &lt; fly-request-id: 01HZD2TFFTP1H7BKHDNW0R7SHH-bom
+1 &lt; date: Sun, 02 Jun 2024 18:19:09 GMT
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-powered-by: Express
+1 &lt; etag: W/&quot;29-oQj3XplkY+x83s6gzA5XvjIR5gM&quot;
+1 &lt; transfer-encoding: chunked
+1 &lt; via: 1.1 fly.io
+{&quot;error&quot;:&quot;Invalid or missing productId.&quot;}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/getCartItems.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/modifyCartItems.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/replaceCartItems.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Cart/deleteCartItems.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+          <div class="comment indention"># ORDERS</div>
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Order/createNewOrder.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Order/getAllOrders.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Order/getSingleOrder.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Order/updateOrder.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">call read(&quot;classpath:com/api/automation/Order/deleteOrder.feature&quot;)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
