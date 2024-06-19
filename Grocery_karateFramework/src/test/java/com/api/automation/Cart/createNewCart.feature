@@ -24,5 +24,6 @@ Feature: Test status endpoint of API
     Then status 201
     And match response.created == true
     And def cartId = response.cartId
+    And print cartId
     And karate.write(cartId, 'cartId.txt')
 
