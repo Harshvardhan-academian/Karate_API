@@ -1,0 +1,25 @@
+name: get all products
+ 
+on:
+  - push
+  - pull_request
+ 
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+ 
+    - name: API tests
+      uses: erikbos/karate-action@main
+      with:
+        url: http://simple-grocery-store-api.online/
+        tests: |
+         Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature
+    # Upload the contents of Test Results directory to workspace
+    - name: Output the run Details
+      uses: actions/upload-artifact@v4
+      with:
+          name: Reports
+          path: target/karate-reports
