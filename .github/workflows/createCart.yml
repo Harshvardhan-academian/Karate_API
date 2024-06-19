@@ -1,63 +1,98 @@
-name: Create cart
+# name: Create cart
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2.0.0
+
+#       - name: API tests
+#         uses: erikbos/karate-action@main
+#         with:
+#           url: http://simple-grocery-store-api.online/
+#           tests: |
+#             Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature
+
+#       - name: Extract cartId from logs
+#         id: extract-cartId
+#         run: |
+#           # Replace with the actual command to extract cartId from logs
+#           cartId=$(grep -oP 'Generated cartId: \K[0-9a-f]{8}' target/karate-reports/*.log | tail -n 1)
+#           echo "::set-output name=cartId::$cartId"
+
+#       - name: Write cartId to file
+#         run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
+
+#       - name: Commit and push updated cartId.txt
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           git config --global user.email "hnigavekar@academian.com"
+#           git config --global user.name "Harsh"
+#           git add cartId.txt
+#           git commit -m "Update cartId in cartId.txt [skip ci]"
+#           git push origin HEAD:main
+
+#       - name: Overwrite cartId in target folder
+#         run: |
+#           echo "Updating cartId in target folder..."
+#           echo "${{ steps.extract-cartId.outputs.cartId }}" > target/cartId.txt
+
+#       - name: Commit and push updated cartId in target folder
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           git add target/cartId.txt
+#           git commit -m "Update cartId in target folder [skip ci]"
+#           git push origin HEAD:main
+
+#       - name: Upload the contents of Test Results directory to workspace
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: Reports
+#           path: target/karate-reports
+
+
+
+
+
+name: Update CartId in GitHub Actions
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - main  # Replace with your branch name
 
 jobs:
-  test:
+  update_cart_id:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.0.0
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: API tests
-        uses: erikbos/karate-action@main
-        with:
-          url: http://simple-grocery-store-api.online/
-          tests: |
-            Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature
-
-      - name: Extract cartId from logs
-        id: extract-cartId
-        run: |
-          # Replace with the actual command to extract cartId from logs
-          cartId=$(grep -oP 'Generated cartId: \K[0-9a-f]{8}' target/karate-reports/*.log | tail -n 1)
-          echo "::set-output name=cartId::$cartId"
-
-      - name: Write cartId to file
-        run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
-
-      - name: Commit and push updated cartId.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Git
         run: |
           git config --global user.email "hnigavekar@academian.com"
           git config --global user.name "Harsh"
+
+      - name: Update cartId.txt
+        run: echo "Updated content" > cartId.txt
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}  # Use the stored PAT as a GitHub token
+        run: |
           git add cartId.txt
           git commit -m "Update cartId in cartId.txt [skip ci]"
           git push origin HEAD:main
-
-      - name: Overwrite cartId in target folder
-        run: |
-          echo "Updating cartId in target folder..."
-          echo "${{ steps.extract-cartId.outputs.cartId }}" > target/cartId.txt
-
-      - name: Commit and push updated cartId in target folder
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git add target/cartId.txt
-          git commit -m "Update cartId in target folder [skip ci]"
-          git push origin HEAD:main
-
-      - name: Upload the contents of Test Results directory to workspace
-        uses: actions/upload-artifact@v4
-        with:
-          name: Reports
-          path: target/karate-reports
