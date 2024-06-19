@@ -31,12 +31,10 @@ jobs:
       - name: Write cartId to file
         run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
 
-      - name: Commit and push updated cartId.txt
+      - name: Commit and push changes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}  # Use the stored PAT as a GitHub token
         run: |
-          git config --global user.email "hnigavekar@academian.com"
-          git config --global user.name "Harsh"
           git add cartId.txt
           git commit -m "Update cartId in cartId.txt [skip ci]"
           git push origin HEAD:main
