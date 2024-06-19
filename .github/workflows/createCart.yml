@@ -30,6 +30,11 @@ jobs:
 
       - name: Write cartId to file
         run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
+        
+      - name: Set up Git
+        run: |
+          git config --global user.email "hnigavekar@academian.com"
+          git config --global user.name "Harsh"
 
       - name: Commit and push changes
         env:
