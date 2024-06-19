@@ -1,4 +1,4 @@
-name: get all products
+name: Create cart
  
 on:
   - push
@@ -16,7 +16,23 @@ jobs:
       with:
         url: http://simple-grocery-store-api.online/
         tests: |
-         Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature
+         Grocery_karateFramework/src/test/java/com/api/automation/Cart/createNewCart.feature 
+            
+    - name: Extract cartId from logs
+      id: extract-cartId
+      run: |
+          # Replace with the actual command to extract cartId from logs
+          cartId=$(grep -oP 'Generated cartId: \K[0-9a-f]{8}' target/cartId.txt | tail -n 1)
+          echo "::set-output name=cartId::$cartId"
+          
+    - name: Write cartId to file
+      run: echo "cartId=${{ steps.extract-cartId.outputs.cartId }}" > cartId.txt
+
+    - name: Commit and push updated cartId.txt
+      run: |
+          git add cartId.txt
+          git commit -m "Update cartId in cartId.txt [skip ci]"
+          git push
     # Upload the contents of Test Results directory to workspace
     - name: Output the run Details
       uses: actions/upload-artifact@v4
