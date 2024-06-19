@@ -1,5 +1,4 @@
 name: Create cart
-
 on:
   push:
     branches:
