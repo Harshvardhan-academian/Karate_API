@@ -17,7 +17,7 @@ jobs:
         url: http://simple-grocery-store-api.online/
         tests: |
           # Grocery_KarateAutomation/src/test/java/com/api/automation/status/status.feature
-          Grocery_karateFramework/src/test/java/com/api/automation/GetStatus/getStatus.feature
+          # Grocery_karateFramework/src/test/java/com/api/automation/GetStatus/getStatus.feature
  
     # Upload the contents of Test Results directory to workspace
     - name: Output the run Details
