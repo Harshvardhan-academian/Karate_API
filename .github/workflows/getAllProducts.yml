@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2.0.0
  
-    - name: API tests
+    - name: API test
       uses: erikbos/karate-action@main
       with:
         url: http://simple-grocery-store-api.online/
