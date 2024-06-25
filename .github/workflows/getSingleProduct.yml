@@ -18,7 +18,6 @@ jobs:
         tests: |
          Grocery_karateFramework/src/test/java/com/api/automation/Product/getSingleProduct.feature
   
- 
     # Upload the contents of Test Results directory to workspace
     - name: Output the run Details
       uses: actions/upload-artifact@v4
